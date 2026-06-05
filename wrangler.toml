@@ -1,0 +1,9 @@
+name = "ig-feed-preview"
+compatibility_date = "2024-11-01"
+
+# Serve the static export (next.js `output: 'export'` → ./out) as a
+# static-assets-only Worker. No server-side code; pure CDN delivery.
+[assets]
+directory = "./out"
+# Serve 404.html for unknown paths (matches Next.js static export output).
+not_found_handling = "404-page"
